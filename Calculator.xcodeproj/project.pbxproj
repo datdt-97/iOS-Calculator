@@ -12,6 +12,8 @@
 		143DD18B22F2E40E00C96ED7 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 143DD18922F2E40E00C96ED7 /* Main.storyboard */; };
 		143DD18D22F2E41000C96ED7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 143DD18C22F2E41000C96ED7 /* Assets.xcassets */; };
 		143DD19022F2E41000C96ED7 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 143DD18E22F2E41000C96ED7 /* LaunchScreen.storyboard */; };
+		14D58E0022F3CBFB0023C9E2 /* BorderedButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14D58DFF22F3CBFB0023C9E2 /* BorderedButton.swift */; };
+		14D58E0222F3DAC70023C9E2 /* Calculator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14D58E0122F3DAC70023C9E2 /* Calculator.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +24,8 @@
 		143DD18C22F2E41000C96ED7 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		143DD18F22F2E41000C96ED7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		143DD19122F2E41000C96ED7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		14D58DFF22F3CBFB0023C9E2 /* BorderedButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BorderedButton.swift; sourceTree = "<group>"; };
+		14D58E0122F3DAC70023C9E2 /* Calculator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Calculator.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,6 +64,8 @@
 				143DD18C22F2E41000C96ED7 /* Assets.xcassets */,
 				143DD18E22F2E41000C96ED7 /* LaunchScreen.storyboard */,
 				143DD19122F2E41000C96ED7 /* Info.plist */,
+				14D58DFF22F3CBFB0023C9E2 /* BorderedButton.swift */,
+				14D58E0122F3DAC70023C9E2 /* Calculator.swift */,
 			);
 			path = Calculator;
 			sourceTree = "<group>";
@@ -96,6 +102,7 @@
 				TargetAttributes = {
 					143DD18122F2E40E00C96ED7 = {
 						CreatedOnToolsVersion = 10.1;
+						LastSwiftMigration = 1030;
 					};
 				};
 			};
@@ -136,7 +143,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				143DD18822F2E40E00C96ED7 /* ViewController.swift in Sources */,
+				14D58E0222F3DAC70023C9E2 /* Calculator.swift in Sources */,
 				143DD18622F2E40E00C96ED7 /* AppDelegate.swift in Sources */,
+				14D58E0022F3CBFB0023C9E2 /* BorderedButton.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -290,7 +299,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.sun.Calculator;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.2;
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
@@ -307,7 +316,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.sun.Calculator;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.2;
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;

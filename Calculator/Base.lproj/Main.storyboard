@@ -1,7 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -9,13 +13,492 @@
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Calculator" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Rwo-lE-hKi" customClass="BorderedButton" customModule="Calculator" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="573.5" width="187.5" height="93.5"/>
+                                <color key="backgroundColor" red="0.83741801979999997" green="0.83743780850000005" blue="0.83742713930000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="Rwo-lE-hKi" secondAttribute="height" multiplier="2:1" id="rln-xn-As5"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <state key="normal" title="0">
+                                    <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                        <color key="value" white="0.42129767255883821" alpha="1" colorSpace="calibratedWhite"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                        <real key="value" value="1"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="clickNumber:" destination="BYZ-38-t0r" eventType="touchUpInside" id="7mF-0t-Coa"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="G6p-vP-Bn0" customClass="BorderedButton" customModule="Calculator" customModuleProvider="target">
+                                <rect key="frame" x="187.5" y="573.5" width="94" height="93.5"/>
+                                <color key="backgroundColor" red="0.83741801979999997" green="0.83743780850000005" blue="0.83742713930000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="G6p-vP-Bn0" secondAttribute="height" multiplier="1:1" id="vsA-90-z2H"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <state key="normal" title=".">
+                                    <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                        <color key="value" white="0.42129767260000001" alpha="1" colorSpace="calibratedWhite"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                        <real key="value" value="1"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="v0j-RW-Ess" customClass="BorderedButton" customModule="Calculator" customModuleProvider="target">
+                                <rect key="frame" x="281.5" y="573.5" width="93.5" height="93.5"/>
+                                <color key="backgroundColor" red="1" green="0.57637232540000005" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <state key="normal" title="=">
+                                    <color key="titleColor" name="textColor" catalog="System" colorSpace="catalog"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                        <color key="value" white="0.42129767260000001" alpha="1" colorSpace="calibratedWhite"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                        <real key="value" value="1"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="clickOperation:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Fr1-ua-ttq"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qZI-ay-4pk" customClass="BorderedButton" customModule="Calculator" customModuleProvider="target">
+                                <rect key="frame" x="281.5" y="479.5" width="93.5" height="94"/>
+                                <color key="backgroundColor" red="1" green="0.57637232540000005" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <state key="normal" title="+">
+                                    <color key="titleColor" name="textColor" catalog="System" colorSpace="catalog"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                        <color key="value" white="0.42129767260000001" alpha="1" colorSpace="calibratedWhite"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                        <real key="value" value="1"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="clickOperation:" destination="BYZ-38-t0r" eventType="touchUpInside" id="uW2-VX-3Jc"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="k2q-FR-v6t" customClass="BorderedButton" customModule="Calculator" customModuleProvider="target">
+                                <rect key="frame" x="187.5" y="479.5" width="94" height="94"/>
+                                <color key="backgroundColor" red="0.83741801979999997" green="0.83743780850000005" blue="0.83742713930000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <state key="normal" title="3">
+                                    <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                        <color key="value" white="0.42129767260000001" alpha="1" colorSpace="calibratedWhite"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                        <real key="value" value="1"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="clickNumber:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Xwi-yd-PJh"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yi3-Hh-nRT" customClass="BorderedButton" customModule="Calculator" customModuleProvider="target">
+                                <rect key="frame" x="94" y="479.5" width="93.5" height="94"/>
+                                <color key="backgroundColor" red="0.83741801979999997" green="0.83743780850000005" blue="0.83742713930000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <state key="normal" title="2">
+                                    <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                        <color key="value" white="0.42129767260000001" alpha="1" colorSpace="calibratedWhite"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                        <real key="value" value="1"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="clickNumber:" destination="BYZ-38-t0r" eventType="touchUpInside" id="OSq-rU-T6y"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jEc-Ma-UbY" customClass="BorderedButton" customModule="Calculator" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="479.5" width="94" height="94"/>
+                                <color key="backgroundColor" red="0.83741801979999997" green="0.83743780850000005" blue="0.83742713930000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <state key="normal" title="1">
+                                    <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                        <color key="value" white="0.42129767260000001" alpha="1" colorSpace="calibratedWhite"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                        <real key="value" value="1"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="clickNumber:" destination="BYZ-38-t0r" eventType="touchUpInside" id="RQq-av-FNy"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Y9u-Cy-WQB" customClass="BorderedButton" customModule="Calculator" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="386" width="94" height="93.5"/>
+                                <color key="backgroundColor" red="0.83741801979999997" green="0.83743780850000005" blue="0.83742713930000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <state key="normal" title="4">
+                                    <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                        <color key="value" white="0.42129767260000001" alpha="1" colorSpace="calibratedWhite"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                        <real key="value" value="1"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="clickNumber:" destination="BYZ-38-t0r" eventType="touchUpInside" id="IE1-nr-zeX"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RYc-l9-1ai" customClass="BorderedButton" customModule="Calculator" customModuleProvider="target">
+                                <rect key="frame" x="94" y="386" width="93.5" height="93.5"/>
+                                <color key="backgroundColor" red="0.83741801979999997" green="0.83743780850000005" blue="0.83742713930000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <state key="normal" title="5">
+                                    <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                        <color key="value" white="0.42129767260000001" alpha="1" colorSpace="calibratedWhite"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                        <real key="value" value="1"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="clickNumber:" destination="BYZ-38-t0r" eventType="touchUpInside" id="HMn-gi-Sg1"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1Rp-uM-YjV" customClass="BorderedButton" customModule="Calculator" customModuleProvider="target">
+                                <rect key="frame" x="187.5" y="386" width="94" height="93.5"/>
+                                <color key="backgroundColor" red="0.83741801979999997" green="0.83743780850000005" blue="0.83742713930000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <state key="normal" title="6">
+                                    <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                        <color key="value" white="0.42129767260000001" alpha="1" colorSpace="calibratedWhite"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                        <real key="value" value="1"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="clickNumber:" destination="BYZ-38-t0r" eventType="touchUpInside" id="BGt-qV-YMD"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1m7-mN-Dlk" customClass="BorderedButton" customModule="Calculator" customModuleProvider="target">
+                                <rect key="frame" x="281.5" y="386" width="93.5" height="93.5"/>
+                                <color key="backgroundColor" red="1" green="0.57637232540000005" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <state key="normal" title="-">
+                                    <color key="titleColor" name="textColor" catalog="System" colorSpace="catalog"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                        <color key="value" white="0.42129767260000001" alpha="1" colorSpace="calibratedWhite"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                        <real key="value" value="1"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="clickOperation:" destination="BYZ-38-t0r" eventType="touchUpInside" id="oD1-ej-Ywd"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Os7-vJ-v5d" customClass="BorderedButton" customModule="Calculator" customModuleProvider="target">
+                                <rect key="frame" x="281.5" y="292" width="93.5" height="94"/>
+                                <color key="backgroundColor" red="1" green="0.57637232540000005" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <state key="normal" title="×">
+                                    <color key="titleColor" name="textColor" catalog="System" colorSpace="catalog"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                        <color key="value" white="0.42129767260000001" alpha="1" colorSpace="calibratedWhite"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                        <real key="value" value="1"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="clickOperation:" destination="BYZ-38-t0r" eventType="touchUpInside" id="mNt-eu-DHK"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="R2k-oR-sdv" customClass="BorderedButton" customModule="Calculator" customModuleProvider="target">
+                                <rect key="frame" x="281.5" y="198.5" width="93.5" height="93.5"/>
+                                <color key="backgroundColor" red="1" green="0.57637232540000005" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <state key="normal" title="÷">
+                                    <color key="titleColor" name="textColor" catalog="System" colorSpace="catalog"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                        <color key="value" white="0.42129767260000001" alpha="1" colorSpace="calibratedWhite"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                        <real key="value" value="1"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="clickOperation:" destination="BYZ-38-t0r" eventType="touchUpInside" id="rwU-hR-NXL"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hMk-eW-Efg" customClass="BorderedButton" customModule="Calculator" customModuleProvider="target">
+                                <rect key="frame" x="187.5" y="198.5" width="94" height="93.5"/>
+                                <color key="backgroundColor" red="0.83741801979999997" green="0.83743780850000005" blue="0.83742713930000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <state key="normal" title="%">
+                                    <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                        <color key="value" white="0.42129767260000001" alpha="1" colorSpace="calibratedWhite"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                        <real key="value" value="1"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7iK-Me-NFx" customClass="BorderedButton" customModule="Calculator" customModuleProvider="target">
+                                <rect key="frame" x="187.5" y="292" width="94" height="94"/>
+                                <color key="backgroundColor" red="0.83741801979999997" green="0.83743780850000005" blue="0.83742713930000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <state key="normal" title="9">
+                                    <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                        <color key="value" white="0.42129767260000001" alpha="1" colorSpace="calibratedWhite"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                        <real key="value" value="1"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="clickNumber:" destination="BYZ-38-t0r" eventType="touchUpInside" id="ACF-QK-JxS"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dpP-W3-HBV" customClass="BorderedButton" customModule="Calculator" customModuleProvider="target">
+                                <rect key="frame" x="94" y="292" width="93.5" height="94"/>
+                                <color key="backgroundColor" red="0.83741801979999997" green="0.83743780850000005" blue="0.83742713930000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <state key="normal" title="8">
+                                    <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                        <color key="value" white="0.42129767260000001" alpha="1" colorSpace="calibratedWhite"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                        <real key="value" value="1"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="clickNumber:" destination="BYZ-38-t0r" eventType="touchUpInside" id="SoB-Xa-jvA"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bD8-ua-pIv" customClass="BorderedButton" customModule="Calculator" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="292" width="94" height="94"/>
+                                <color key="backgroundColor" red="0.83741801979999997" green="0.83743780850000005" blue="0.83742713930000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <state key="normal" title="7">
+                                    <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                        <color key="value" white="0.42129767260000001" alpha="1" colorSpace="calibratedWhite"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                        <real key="value" value="1"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="clickNumber:" destination="BYZ-38-t0r" eventType="touchUpInside" id="bbc-x3-WZ1"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Q1z-ch-4DD" customClass="BorderedButton" customModule="Calculator" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="198.5" width="94" height="93.5"/>
+                                <color key="backgroundColor" red="0.83741801979999997" green="0.83743780850000005" blue="0.83742713930000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <state key="normal" title="AC">
+                                    <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                        <color key="value" white="0.42129767260000001" alpha="1" colorSpace="calibratedWhite"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                        <real key="value" value="1"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="clear:" destination="BYZ-38-t0r" eventType="touchUpInside" id="bXe-Yv-gnK"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hzO-Jm-Lzs" customClass="BorderedButton" customModule="Calculator" customModuleProvider="target">
+                                <rect key="frame" x="94" y="198.5" width="93.5" height="93.5"/>
+                                <color key="backgroundColor" red="0.83741801979999997" green="0.83743780850000005" blue="0.83742713930000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <state key="normal" title="+/-">
+                                    <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                        <color key="value" white="0.42129767260000001" alpha="1" colorSpace="calibratedWhite"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                        <real key="value" value="1"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </button>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="h3K-lH-ibp">
+                                <rect key="frame" x="0.0" y="20" width="375" height="178.5"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Gnf-yS-0eo">
+                                        <rect key="frame" x="0.0" y="89" width="375" height="89.5"/>
+                                        <color key="backgroundColor" red="0.4756349325" green="0.47564673419999998" blue="0.47564041610000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="90"/>
+                                        <color key="textColor" name="textColor" catalog="System" colorSpace="catalog"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" red="0.4756349325" green="0.47564673419999998" blue="0.47564041610000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="bottom" secondItem="Gnf-yS-0eo" secondAttribute="bottom" id="KXK-gd-waS"/>
+                                    <constraint firstItem="Gnf-yS-0eo" firstAttribute="height" secondItem="h3K-lH-ibp" secondAttribute="height" multiplier="1/2" id="ZrN-2K-wi2"/>
+                                    <constraint firstItem="Gnf-yS-0eo" firstAttribute="leading" secondItem="h3K-lH-ibp" secondAttribute="leading" id="lay-Ve-ncO"/>
+                                    <constraint firstAttribute="trailing" secondItem="Gnf-yS-0eo" secondAttribute="trailing" id="x3Z-61-Rcc"/>
+                                </constraints>
+                            </view>
+                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GN8-oI-IAp" customClass="BorderedButton" customModule="Calculator" customModuleProvider="target">
+                                <rect key="frame" x="94" y="198" width="93.5" height="93.5"/>
+                                <color key="backgroundColor" red="0.83741801979999997" green="0.83743780850000005" blue="0.83742713930000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <state key="normal" title="+/-">
+                                    <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                        <color key="value" white="0.42129767260000001" alpha="1" colorSpace="calibratedWhite"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                        <real key="value" value="1"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </button>
+                        </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="1m7-mN-Dlk" firstAttribute="leading" secondItem="1Rp-uM-YjV" secondAttribute="trailing" id="0Jg-mo-biD"/>
+                            <constraint firstItem="1m7-mN-Dlk" firstAttribute="width" secondItem="1m7-mN-Dlk" secondAttribute="height" multiplier="1:1" id="0bi-et-2y1"/>
+                            <constraint firstItem="jEc-Ma-UbY" firstAttribute="top" secondItem="Y9u-Cy-WQB" secondAttribute="bottom" id="2fE-7G-OFX"/>
+                            <constraint firstItem="RYc-l9-1ai" firstAttribute="width" secondItem="RYc-l9-1ai" secondAttribute="height" multiplier="1:1" id="3Wz-w3-qX9"/>
+                            <constraint firstItem="v0j-RW-Ess" firstAttribute="leading" secondItem="G6p-vP-Bn0" secondAttribute="trailing" id="4MS-XP-iUJ"/>
+                            <constraint firstItem="G6p-vP-Bn0" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" multiplier="1/4" id="5B5-2z-w4T"/>
+                            <constraint firstItem="Q1z-ch-4DD" firstAttribute="width" secondItem="Q1z-ch-4DD" secondAttribute="height" multiplier="1:1" id="6f2-Su-pTu"/>
+                            <constraint firstItem="qZI-ay-4pk" firstAttribute="width" secondItem="qZI-ay-4pk" secondAttribute="height" multiplier="1:1" id="6mL-dV-x0T"/>
+                            <constraint firstItem="Y9u-Cy-WQB" firstAttribute="width" secondItem="Y9u-Cy-WQB" secondAttribute="height" multiplier="1:1" id="7Jt-c8-K4C"/>
+                            <constraint firstItem="v0j-RW-Ess" firstAttribute="width" secondItem="v0j-RW-Ess" secondAttribute="height" multiplier="1:1" id="7Vy-Ak-ja0"/>
+                            <constraint firstItem="dpP-W3-HBV" firstAttribute="width" secondItem="dpP-W3-HBV" secondAttribute="height" multiplier="1:1" id="8Zl-gQ-qBu"/>
+                            <constraint firstItem="v0j-RW-Ess" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" multiplier="1/4" id="9dI-7R-dFQ"/>
+                            <constraint firstItem="Q1z-ch-4DD" firstAttribute="width" secondItem="bD8-ua-pIv" secondAttribute="width" id="Arw-yD-8n6"/>
+                            <constraint firstItem="Os7-vJ-v5d" firstAttribute="width" secondItem="1m7-mN-Dlk" secondAttribute="width" id="BFN-Li-yPc"/>
+                            <constraint firstItem="Y9u-Cy-WQB" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="BYR-nP-5X6"/>
+                            <constraint firstItem="bD8-ua-pIv" firstAttribute="top" secondItem="Q1z-ch-4DD" secondAttribute="bottom" id="Coi-sV-q2P"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="v0j-RW-Ess" secondAttribute="bottom" id="DHn-8O-Wzk"/>
+                            <constraint firstItem="Os7-vJ-v5d" firstAttribute="top" secondItem="R2k-oR-sdv" secondAttribute="bottom" id="ErT-DR-Fsd"/>
+                            <constraint firstItem="hMk-eW-Efg" firstAttribute="leading" secondItem="hzO-Jm-Lzs" secondAttribute="trailing" id="Fb1-Sq-vfa"/>
+                            <constraint firstItem="7iK-Me-NFx" firstAttribute="top" secondItem="hMk-eW-Efg" secondAttribute="bottom" id="FpR-wK-whl"/>
+                            <constraint firstItem="Rwo-lE-hKi" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" multiplier="1/2" id="GHO-88-cU2"/>
+                            <constraint firstItem="7iK-Me-NFx" firstAttribute="leading" secondItem="dpP-W3-HBV" secondAttribute="trailing" id="Gbb-0W-J6h"/>
+                            <constraint firstItem="RYc-l9-1ai" firstAttribute="top" secondItem="dpP-W3-HBV" secondAttribute="bottom" id="Gwe-8E-v8V"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="h3K-lH-ibp" secondAttribute="trailing" id="HlW-TT-Cxi"/>
+                            <constraint firstItem="1Rp-uM-YjV" firstAttribute="leading" secondItem="RYc-l9-1ai" secondAttribute="trailing" id="IJm-Cd-j2e"/>
+                            <constraint firstItem="R2k-oR-sdv" firstAttribute="width" secondItem="R2k-oR-sdv" secondAttribute="height" multiplier="1:1" id="IX7-ok-VW6"/>
+                            <constraint firstItem="v0j-RW-Ess" firstAttribute="top" secondItem="qZI-ay-4pk" secondAttribute="bottom" id="J8N-sv-In8"/>
+                            <constraint firstItem="Rwo-lE-hKi" firstAttribute="top" secondItem="yi3-Hh-nRT" secondAttribute="bottom" id="Ji2-U4-aWu"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Os7-vJ-v5d" secondAttribute="trailing" id="Lhz-os-Exo"/>
+                            <constraint firstItem="RYc-l9-1ai" firstAttribute="width" secondItem="yi3-Hh-nRT" secondAttribute="width" id="M3A-Mk-yaO"/>
+                            <constraint firstItem="Os7-vJ-v5d" firstAttribute="width" secondItem="Os7-vJ-v5d" secondAttribute="height" multiplier="1:1" id="Mfn-EM-wVI"/>
+                            <constraint firstItem="hzO-Jm-Lzs" firstAttribute="width" secondItem="Q1z-ch-4DD" secondAttribute="width" id="N4p-5S-hL6"/>
+                            <constraint firstItem="yi3-Hh-nRT" firstAttribute="top" secondItem="RYc-l9-1ai" secondAttribute="bottom" id="NQI-sb-JvP"/>
+                            <constraint firstItem="dpP-W3-HBV" firstAttribute="width" secondItem="7iK-Me-NFx" secondAttribute="width" id="OiU-Go-nh9"/>
+                            <constraint firstItem="jEc-Ma-UbY" firstAttribute="width" secondItem="yi3-Hh-nRT" secondAttribute="width" id="PMu-Lg-WWF"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="Rwo-lE-hKi" secondAttribute="bottom" id="Pv9-hH-wuc"/>
+                            <constraint firstItem="Os7-vJ-v5d" firstAttribute="leading" secondItem="7iK-Me-NFx" secondAttribute="trailing" id="QR2-A5-PuE"/>
+                            <constraint firstItem="R2k-oR-sdv" firstAttribute="width" secondItem="hMk-eW-Efg" secondAttribute="width" id="RbL-lz-Gt6"/>
+                            <constraint firstItem="Y9u-Cy-WQB" firstAttribute="top" secondItem="bD8-ua-pIv" secondAttribute="bottom" id="Szk-h5-uWP"/>
+                            <constraint firstItem="G6p-vP-Bn0" firstAttribute="leading" secondItem="Rwo-lE-hKi" secondAttribute="trailing" id="WHX-rS-jFL"/>
+                            <constraint firstItem="k2q-FR-v6t" firstAttribute="top" secondItem="1Rp-uM-YjV" secondAttribute="bottom" id="XKm-d2-IsO"/>
+                            <constraint firstItem="jEc-Ma-UbY" firstAttribute="width" secondItem="jEc-Ma-UbY" secondAttribute="height" multiplier="1:1" id="XMt-9Q-4jf"/>
+                            <constraint firstItem="hzO-Jm-Lzs" firstAttribute="width" secondItem="hzO-Jm-Lzs" secondAttribute="height" multiplier="1:1" id="XmV-AR-rrX"/>
+                            <constraint firstItem="k2q-FR-v6t" firstAttribute="leading" secondItem="yi3-Hh-nRT" secondAttribute="trailing" id="Y27-yT-NoX"/>
+                            <constraint firstItem="GN8-oI-IAp" firstAttribute="width" secondItem="GN8-oI-IAp" secondAttribute="height" multiplier="1:1" id="YHB-Ca-g7E"/>
+                            <constraint firstItem="k2q-FR-v6t" firstAttribute="width" secondItem="qZI-ay-4pk" secondAttribute="width" id="ZE8-Wj-wdj"/>
+                            <constraint firstItem="qZI-ay-4pk" firstAttribute="width" secondItem="v0j-RW-Ess" secondAttribute="width" id="a2s-D0-cZO"/>
+                            <constraint firstItem="k2q-FR-v6t" firstAttribute="width" secondItem="k2q-FR-v6t" secondAttribute="height" multiplier="1:1" id="aeU-2f-xtU"/>
+                            <constraint firstItem="RYc-l9-1ai" firstAttribute="leading" secondItem="Y9u-Cy-WQB" secondAttribute="trailing" id="b6q-ZM-zMy"/>
+                            <constraint firstItem="1m7-mN-Dlk" firstAttribute="width" secondItem="1Rp-uM-YjV" secondAttribute="width" id="bWU-qo-PeA"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="G6p-vP-Bn0" secondAttribute="bottom" id="cVY-bI-qvG"/>
+                            <constraint firstItem="1m7-mN-Dlk" firstAttribute="top" secondItem="Os7-vJ-v5d" secondAttribute="bottom" id="cpk-vP-ktK"/>
+                            <constraint firstItem="h3K-lH-ibp" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="cvX-pJ-HH6"/>
+                            <constraint firstItem="7iK-Me-NFx" firstAttribute="width" secondItem="Os7-vJ-v5d" secondAttribute="width" id="dTW-1h-Ye6"/>
+                            <constraint firstItem="1Rp-uM-YjV" firstAttribute="width" secondItem="RYc-l9-1ai" secondAttribute="width" id="e2l-A1-nV7"/>
+                            <constraint firstItem="bD8-ua-pIv" firstAttribute="width" secondItem="dpP-W3-HBV" secondAttribute="width" id="et2-Pd-zeN"/>
+                            <constraint firstItem="1Rp-uM-YjV" firstAttribute="width" secondItem="1Rp-uM-YjV" secondAttribute="height" multiplier="1:1" id="g5X-mk-NXu"/>
+                            <constraint firstItem="yi3-Hh-nRT" firstAttribute="width" secondItem="k2q-FR-v6t" secondAttribute="width" id="g79-lF-9Uo"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="qZI-ay-4pk" secondAttribute="trailing" id="gwA-9E-GDg"/>
+                            <constraint firstItem="Rwo-lE-hKi" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="hgF-Eb-w0B"/>
+                            <constraint firstItem="yi3-Hh-nRT" firstAttribute="width" secondItem="yi3-Hh-nRT" secondAttribute="height" multiplier="1:1" id="kYH-u5-CTY"/>
+                            <constraint firstItem="dpP-W3-HBV" firstAttribute="top" secondItem="hzO-Jm-Lzs" secondAttribute="bottom" id="kur-0l-lDx"/>
+                            <constraint firstItem="hMk-eW-Efg" firstAttribute="width" secondItem="hMk-eW-Efg" secondAttribute="height" multiplier="1:1" id="l9D-dH-RV0"/>
+                            <constraint firstItem="Rwo-lE-hKi" firstAttribute="top" secondItem="jEc-Ma-UbY" secondAttribute="bottom" id="mof-KG-Uby"/>
+                            <constraint firstItem="yi3-Hh-nRT" firstAttribute="leading" secondItem="jEc-Ma-UbY" secondAttribute="trailing" id="ol2-U3-Tvm"/>
+                            <constraint firstItem="7iK-Me-NFx" firstAttribute="width" secondItem="7iK-Me-NFx" secondAttribute="height" multiplier="1:1" id="p0y-9t-NIq"/>
+                            <constraint firstItem="G6p-vP-Bn0" firstAttribute="top" secondItem="k2q-FR-v6t" secondAttribute="bottom" id="qpj-2J-LYH"/>
+                            <constraint firstItem="h3K-lH-ibp" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="rvu-L7-mau"/>
+                            <constraint firstItem="1Rp-uM-YjV" firstAttribute="top" secondItem="7iK-Me-NFx" secondAttribute="bottom" id="sZS-Jb-k9n"/>
+                            <constraint firstItem="hzO-Jm-Lzs" firstAttribute="leading" secondItem="Q1z-ch-4DD" secondAttribute="trailing" id="toN-Tl-fCA"/>
+                            <constraint firstItem="Q1z-ch-4DD" firstAttribute="top" secondItem="h3K-lH-ibp" secondAttribute="bottom" id="tsV-1o-ToW"/>
+                            <constraint firstItem="qZI-ay-4pk" firstAttribute="leading" secondItem="k2q-FR-v6t" secondAttribute="trailing" id="u3A-9Z-Qb7"/>
+                            <constraint firstItem="bD8-ua-pIv" firstAttribute="width" secondItem="bD8-ua-pIv" secondAttribute="height" multiplier="1:1" id="vIe-5o-CSm"/>
+                            <constraint firstItem="qZI-ay-4pk" firstAttribute="top" secondItem="1m7-mN-Dlk" secondAttribute="bottom" id="wpo-3D-REE"/>
+                            <constraint firstItem="dpP-W3-HBV" firstAttribute="leading" secondItem="bD8-ua-pIv" secondAttribute="trailing" id="xZ1-Gv-haw"/>
+                            <constraint firstItem="R2k-oR-sdv" firstAttribute="leading" secondItem="hMk-eW-Efg" secondAttribute="trailing" id="xnZ-hL-042"/>
+                            <constraint firstItem="Q1z-ch-4DD" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="zDg-PA-6ei"/>
+                            <constraint firstItem="hMk-eW-Efg" firstAttribute="width" secondItem="hzO-Jm-Lzs" secondAttribute="width" id="zRp-gi-gxj"/>
+                            <constraint firstItem="Y9u-Cy-WQB" firstAttribute="width" secondItem="jEc-Ma-UbY" secondAttribute="width" id="zUa-ZR-7Ij"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
+                    <connections>
+                        <outlet property="labelResult" destination="Gnf-yS-0eo" id="JDl-cM-K7k"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
